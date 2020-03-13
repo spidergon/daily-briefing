@@ -8,7 +8,6 @@ function success({ coords }) {
   console.log(`Longitude : ${longitude}`)
   console.log(`La précision est de ${accuracy} mètres.`)
 
-
   const url = `/.netlify/functions/weatherapi?lat=${latitude}&lon=${longitude}`
 
   fetch(url).then(response => {
@@ -21,8 +20,6 @@ function success({ coords }) {
     document.querySelector('#desc').textContent = data.weather[0].description
 
     document.querySelector('#weather').classList.remove('hidden')
-
-    console.log(data)
   })
 }
 
