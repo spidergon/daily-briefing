@@ -34,8 +34,5 @@ async function getNews (country) {
 
 module.exports = async () => {
   const newsPromises = countries.map(getNews)
-  return Promise.all(newsPromises).then(newsObjects => {
-    console.log(newsObjects)
-    return [].concat.apply([], newsObjects)
-  })
+  return Promise.all(newsPromises).then(newsObjects => [].concat.apply([], newsObjects))
 }
