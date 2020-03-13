@@ -1,8 +1,8 @@
 {
-  "name": "3-build-with-ssg",
+  "name": "jam-ssg-11ty",
   "version": "1.0.0",
   "description": "",
-  "main": "vibe.js",
+  "main": "src/js/vibe.js",
   "scripts": {
     "build": "eleventy",
     "start": "eleventy --serve"
