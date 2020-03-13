@@ -40,5 +40,68 @@
         }
       }
     ]
+  },
+  "es": {
+    "country": "es",
+    "articles": [
+      {
+        "title": "Stocks bounce after worst losses since 1987 crash | TheHill - The Hill",
+        "url": "https://thehill.com/policy/finance/487409-stocks-bounce-after-worst-losses-since-1987-crash",
+        "publishedAt": "2020-03-13T16:00:57Z",
+        "source": {
+          "name": "The Hill"
+        }
+      },
+      {
+        "title": "Ford, GM instruct employees to work from home due to coronavirus - CNBC",
+        "url": "https://www.cnbc.com/2020/03/13/ford-gm-instruct-employees-to-work-from-home-due-to-coronavirus.html",
+        "publishedAt": "2020-03-13T15:59:19Z",
+        "source": {
+          "name": "CNBC"
+        }
+      }
+    ]
+  },
+  "pt": {
+    "country": "pt",
+    "articles": [
+      {
+        "title": "Stocks bounce after worst losses since 1987 crash | TheHill - The Hill",
+        "url": "https://thehill.com/policy/finance/487409-stocks-bounce-after-worst-losses-since-1987-crash",
+        "publishedAt": "2020-03-13T16:00:57Z",
+        "source": {
+          "name": "The Hill"
+        }
+      },
+      {
+        "title": "Ford, GM instruct employees to work from home due to coronavirus - CNBC",
+        "url": "https://www.cnbc.com/2020/03/13/ford-gm-instruct-employees-to-work-from-home-due-to-coronavirus.html",
+        "publishedAt": "2020-03-13T15:59:19Z",
+        "source": {
+          "name": "CNBC"
+        }
+      }
+    ]
+  },
+  "de": {
+    "country": "de",
+    "articles": [
+      {
+        "title": "Stocks bounce after worst losses since 1987 crash | TheHill - The Hill",
+        "url": "https://thehill.com/policy/finance/487409-stocks-bounce-after-worst-losses-since-1987-crash",
+        "publishedAt": "2020-03-13T16:00:57Z",
+        "source": {
+          "name": "The Hill"
+        }
+      },
+      {
+        "title": "Ford, GM instruct employees to work from home due to coronavirus - CNBC",
+        "url": "https://www.cnbc.com/2020/03/13/ford-gm-instruct-employees-to-work-from-home-due-to-coronavirus.html",
+        "publishedAt": "2020-03-13T15:59:19Z",
+        "source": {
+          "name": "CNBC"
+        }
+      }
+    ]
   }
 }
