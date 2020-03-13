@@ -5,7 +5,7 @@ const countries = require('./countries.json')
 
 async function getNews (country) {
   try {
-    const response = await axios.get(`http://newsapi.org/v2/top-headlines?country=${country}&category=business&apiKey=${process.env.NEWS_API_KEY}&pageSize=10`);
+    const response = await axios.get(`http://newsapi.org/v2/top-headlines?country=${country}&category=business&apiKey=${process.env.NEWS_API_KEY}&pageSize=5`);
     return {
       country,
       articles: response.data.articles
@@ -32,7 +32,11 @@ async function getNews (country) {
   }
 }
 
-module.exports = async () => {
+module.exports = async function () {
+  if(process.env.NODE_ENV === 'development') {
+    const mockData = require('./mock.json')
+    return countries.map(country => mockData[country])
+  }
   const newsPromises = countries.map(getNews)
   return Promise.all(newsPromises).then(newsObjects => [].concat.apply([], newsObjects))
 }

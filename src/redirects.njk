@@ -2,10 +2,10 @@
 permalink: _redirects
 ---
 
-/  /fr/index.html  200  Language=fr
+/  /us/index.html  200  Language=us
 
 {%- for item in news %}
 /  /{{item.country}}/index.html  200  Country={{ item.country}}
 {%- endfor %}
 
-/  /fr/index.html  404
+/  /us/index.html  404
