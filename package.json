@@ -1,20 +1,26 @@
 {
-  "name": "jam-ssg-11ty",
+  "name": "daily-briefing",
   "version": "1.0.0",
-  "description": "",
-  "main": "src/js/vibe.js",
+  "description": "Get your daily briefing of motivation messages, daily hot news (localized by country) and your current weather.",
   "scripts": {
     "build": "eleventy",
     "start": "eleventy --serve"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "@chrisservius",
+  "license": "MIT",
   "dependencies": {
     "axios": "0.19.2",
     "dotenv": "8.2.0"
   },
   "devDependencies": {
     "@11ty/eleventy": "0.10.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/spidergon/daily-briefing"
+  },
+  "bugs": {
+    "url": "https://github.com/spidergon/daily-briefing/issues"
   }
 }
