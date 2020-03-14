@@ -5,6 +5,7 @@
       {
         "title": "Une semaine en Bourse : le récap du 9 au 13 mars - Boursorama",
         "url": "https://www.boursorama.com/bourse/actualites/une-semaine-en-bourse-le-recap-du-9-au-13-mars-2115c03118181e0e5aab9dfaef9aa0ae",
+        "urlToImage": "https://media.lesechos.com/api/v1/images/view/5e6cc982d286c2384c4904a5/1280x720/0602923804878-web-tete.jpg",
         "publishedAt": "2020-03-13T15:21:00Z",
         "source": {
           "name": "Boursorama.com"
@@ -13,6 +14,7 @@
       {
         "title": "Coronavirus : Lufthansa annule 23.000 vols entre le 29 mars et le 24 avril - 20 Minutes",
         "url": "https://www.20minutes.fr/voyage/2738443-20200312-coronavirus-lufthansa-annule-23000-vols-entre-29-mars-24-avril",
+        "urlToImage": "https://media.ouest-france.fr/v1/pictures/MjAyMDAzOGQ4MjQ0MDE4MjQyMTRlYTVlOTJjMDgyOGNhZTI2M2Q?width=1260&height=712&focuspoint=50%2C25&cropresize=1&client_id=bpeditorial&sign=4d7ae564ff58edff4a31203c75731b8e62554ecd9c3c579bb5d5301004d2e8c7",
         "publishedAt": "2020-03-13T15:21:00Z",
         "source": {
           "name": "20minutes.fr"

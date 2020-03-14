@@ -3,8 +3,14 @@
   "version": "1.0.0",
   "description": "Get your daily briefing of motivation messages, daily hot news (localized by country) and your current weather.",
   "scripts": {
-    "build": "eleventy",
-    "start": "eleventy --serve"
+    "build": "cross-env ELEVENTY_ENV=production npm-run-all clean build:css build:html",
+    "build:css": "postcss src/site/_includes/css/tailwind.css -o src/site/css/styles.css",
+    "build:html": "eleventy",
+    "watch": "npm-run-all --parallel watch:css watch:html",
+    "watch:css": "postcss src/site/_includes/css/tailwind.css -o src/site/css/styles.css --watch",
+    "watch:html": "eleventy --serve --port=8181",
+    "start": "clear; npm run clean && cross-env ELEVENTY_ENV=development yarn watch",
+    "clean": "rm -rf dist/"
   },
   "keywords": [],
   "author": "@chrisservius",
@@ -14,7 +20,17 @@
     "dotenv": "8.2.0"
   },
   "devDependencies": {
-    "@11ty/eleventy": "0.10.0"
+    "@11ty/eleventy": "0.10.0",
+    "@fullhuman/postcss-purgecss": "2.1.0",
+    "autoprefixer": "9.7.4",
+    "cross-env": "7.0.2",
+    "cssnano": "4.1.10",
+    "html-minifier": "4.0.0",
+    "luxon": "1.22.0",
+    "npm-run-all": "4.1.5",
+    "postcss-cli": "7.1.0",
+    "tailwindcss": "1.2.0",
+    "uglify-js": "3.8.0"
   },
   "repository": {
     "type": "git",

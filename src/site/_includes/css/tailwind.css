@@ -1,0 +1,64 @@
+/* purgecss start ignore */
+@tailwind base;
+/* purgecss end ignore */
+
+body {
+  text-align: center;
+  @apply bg-gray-100;
+}
+
+div.container {
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+/*
+  Global headings conventions
+*/
+h1,
+h2 {
+  @apply text-gray-900;
+  @apply mb-4;
+  @apply font-semibold;
+}
+h1 {
+  @apply text-3xl;
+}
+
+/*
+  Base styles for links
+*/
+a {
+  @apply border-b-2;
+  @apply border-teal-400;
+}
+a:hover,
+a:focus {
+  @apply border-b-2;
+  @apply border-teal-200;
+}
+a.naked:link,
+a.naked:visited {
+  @apply border-0;
+}
+
+@media (min-width: 767px) {
+  .max-h-img {
+    max-height: 150px;
+  }
+}
+
+.love {
+  font-size: 2em;
+  color: red;
+}
+
+.hidden {
+  display: none;
+}
+
+/* purgecss start ignore */
+@tailwind components;
+/* purgecss end ignore */
+
+@tailwind utilities;

@@ -33,7 +33,7 @@ async function getNews (country) {
 }
 
 module.exports = async function () {
-  if(process.env.NODE_ENV === 'development') {
+  if(process.env.ELEVENTY_ENV === 'development') {
     const mockData = require('./mock.json')
     return countries.map(country => mockData[country])
   }
