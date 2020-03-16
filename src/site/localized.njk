@@ -4,8 +4,8 @@ layout: base.njk
 pagination:
   data: news
   size: 1
-  alias: news
-permalink: /{{ news.country }}/index.html
+  alias: selectedNews
+permalink: /{{ selectedNews.country }}/index.html
 ---
 
 <div class="container">
@@ -25,9 +25,18 @@ permalink: /{{ news.country }}/index.html
     <p id="desc"></p>
   </div>
 
-  <h2 class="mt-4 mb-8">News in your country</h2>
+  <h2 class="mt-4 mb-8">
+    News in your country:
+    {% for item in news %}
+      {% if item.country === selectedNews.country %}
+        {{ item.country }}
+      {% else %}
+        <a href="/{{ item.country }}">{{ item.country }}</a>
+      {% endif %}
+    {% endfor %}
+  </h2>
 
-  {% for article in news.articles %}
+  {% for article in selectedNews.articles %}
     <div class="text-center md:text-left bg-white mb-8 p-4 border-b-2 md:flex">
       <div class="md:flex-shrink-0">
         <a href="{{ article.url }}" target="_blank" rel="noreferrer noopener"><img class="max-h-img object-cover rounded-lg md:w-56" src="{{ article.urlToImage}}" alt="{{ article.title}}"></a>
