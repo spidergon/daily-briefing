@@ -8,8 +8,8 @@ module.exports = function(config) {
   // compress and combine js files
   config.addFilter("jsmin", require("./src/utils/minify-js.js") )
 
-  // minify the html output when running in prod
   if (process.env.ELEVENTY_ENV == "production") {
+    // minify the html output when running in prod
     config.addTransform("htmlmin", require("./src/utils/minify-html.js") )
   }
 
