@@ -10,6 +10,7 @@
     "watch:css": "postcss src/site/_includes/css/tailwind.css -o src/site/css/styles.css --watch",
     "watch:html": "eleventy --serve --port=8181",
     "start": "clear; npm run clean && cross-env ELEVENTY_ENV=development yarn watch",
+    "serve": "http-server dist",
     "clean": "rm -rf dist/",
     "lint": "eslint --ignore-pattern '/dist/*' -o ./eslint_result.html -f html ."
   },
