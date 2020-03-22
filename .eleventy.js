@@ -1,23 +1,25 @@
-const { DateTime } = require('luxon')
+const moment = require('moment')
 
-module.exports = function(config) {
-  // Date helpers
-  config.addFilter('readableDate', date => DateTime.fromISO(date, { zone: 'utc' }).toFormat('LLLL d, y - h:m'))
-
+module.exports = function (config) {
   // compress and combine js files
   config.addFilter('jsmin', require('./src/utils/minify-js.js'))
+
+  // Date shortcode
+  config.addShortcode('date', (value, country) => {
+    return moment(value).locale(country.replace('us', 'en').replace('br', 'pt')).format('LLLL')
+  })
 
   if (process.env.ELEVENTY_ENV == 'production') {
     // minify the html output when running in prod
     config.addTransform('htmlmin', require('./src/utils/minify-html.js'))
   }
 
-  config.setBrowserSyncConfig({
-    https: {
-      key: '/home/chris/localhost.key',
-      cert: '/home/chris/localhost.crt'
-    }
-  })
+  // config.setBrowserSyncConfig({
+  //   https: {
+  //     key: '/home/chris/localhost.key',
+  //     cert: '/home/chris/localhost.crt'
+  //   }
+  // })
 
   // Static assets to pass through
   config.addPassthroughCopy('./src/site/css')
@@ -26,11 +28,11 @@ module.exports = function(config) {
     dir: {
       input: 'src/site',
       includes: '_includes',
-      output: 'dist'
+      output: 'dist',
     },
     passthroughFileCopy: true,
     templateFormats: ['njk'],
     htmlTemplateEngine: 'njk',
-    markdownTemplateEngine: 'njk'
+    markdownTemplateEngine: 'njk',
   }
 }

@@ -43,7 +43,7 @@ permalink: /{{ selectedNews.country }}/index.html
       </div>
       <div class="mt-4 md:mt-0 md:ml-6">
         <a href="{{ article.url }}" class="naked block mt-1 text-lg leading-tight font-semibold text-gray-900 hover:underline mb-4" target="_blank" rel="noreferrer noopener">{{ article.title }}</a>
-        <span class="text-gray-600">{{ article.source.name }} - <time>{{ article.publishedAt | readableDate }}</time></span>
+        <span class="text-gray-600">{{ article.source.name }} - <time>{% date article.publishedAt, selectedNews.country %}</time></span>
       </div>
     </div>
   {% endfor %}
