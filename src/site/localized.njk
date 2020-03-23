@@ -9,11 +9,11 @@ permalink: /{{ selectedNews.country }}/index.html
 ---
 
 <div class="container">
-  <h1 class="uppercase">{{ title }}</h1>
-  <div class="vibe">
+  <h1>{{ title }}</h1>
+  <div class="vibe mt-4">
     You are great!
   </div>
-  <div class="love">
+  <div class="red text-3xl">
     ❤
   </div>
 
@@ -42,7 +42,7 @@ permalink: /{{ selectedNews.country }}/index.html
         <a href="{{ article.url }}" target="_blank" rel="noreferrer noopener"><img class="max-h-img object-cover rounded-lg md:w-56" src="{{ article.urlToImage}}" alt="{{ article.title}}"></a>
       </div>
       <div class="mt-4 md:mt-0 md:ml-6">
-        <a href="{{ article.url }}" class="naked block mt-1 text-lg leading-tight font-semibold text-gray-900 hover:underline mb-4" target="_blank" rel="noreferrer noopener">{{ article.title }}</a>
+        <a href="{{ article.url }}" class="naked block mt-1 text-lg leading-tight font-semibold hover:underline mb-4" target="_blank" rel="noreferrer noopener">{{ article.title }}</a>
         <span class="text-gray-600">{{ article.source.name }} - <time>{% date article.publishedAt, selectedNews.country %}</time></span>
       </div>
     </div>

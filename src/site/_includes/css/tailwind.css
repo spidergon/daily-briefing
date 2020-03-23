@@ -1,11 +1,7 @@
 /* purgecss start ignore */
 @tailwind base;
+@tailwind components;
 /* purgecss end ignore */
-
-body {
-  text-align: center;
-  @apply bg-gray-100;
-}
 
 div.container {
   max-width: 650px;
@@ -15,14 +11,13 @@ div.container {
 /*
   Global headings conventions
 */
+h1 {
+  @apply uppercase;
+  @apply text-3xl;
+}
 h1,
 h2 {
-  @apply text-gray-900;
-  @apply mb-4;
   @apply font-semibold;
-}
-h1 {
-  @apply text-3xl;
 }
 
 /*
@@ -34,7 +29,6 @@ a {
 }
 a:hover,
 a:focus {
-  @apply border-b-2;
   @apply border-teal-200;
 }
 a.naked:link,
@@ -48,17 +42,8 @@ a.naked:visited {
   }
 }
 
-.love {
-  font-size: 2em;
+.red {
   color: red;
 }
-
-.hidden {
-  display: none;
-}
-
-/* purgecss start ignore */
-@tailwind components;
-/* purgecss end ignore */
 
 @tailwind utilities;
