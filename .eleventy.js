@@ -20,7 +20,6 @@ module.exports = function (config) {
   //   }
   // })
 
-  // Static assets to pass through
   config.addPassthroughCopy('./src/site/css')
 
   return {
@@ -29,7 +28,6 @@ module.exports = function (config) {
       includes: '_includes',
       output: 'dist'
     },
-    passthroughFileCopy: true,
     templateFormats: ['njk'],
     htmlTemplateEngine: 'njk',
     markdownTemplateEngine: 'njk'
