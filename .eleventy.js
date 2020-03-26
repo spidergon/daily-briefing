@@ -1,8 +1,4 @@
 module.exports = function (config) {
-  config.addPlugin(require('eleventy-plugin-lazyimages'), {
-    cacheFile: '' // don't cache results to a file
-  })
-
   config.addFilter('jsmin', require('./src/utils/minify-js.js')) // compress and combine js files
 
   config.addShortcode('date', (value, country) => {
@@ -12,6 +8,10 @@ module.exports = function (config) {
   if (process.env.ELEVENTY_ENV == 'production') {
     config.addTransform('htmlmin', require('./src/utils/minify-html.js'))
   }
+
+  config.addPlugin(require('eleventy-plugin-lazyimages'), {
+    cacheFile: '' // don't cache results to a file
+  })
 
   // config.setBrowserSyncConfig({
   //   https: {

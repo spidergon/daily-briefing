@@ -8,10 +8,13 @@ async function getNews(country) {
     const response = await axios.get(
       `http://newsapi.org/v2/top-headlines?country=${country}&category=business&apiKey=${process.env.NEWS_API_KEY}&pageSize=10`
     )
-    return {
-      country,
-      articles: response.data.articles
-    }
+    const articles = response.data.articles.map(article => {
+      const newArticle = { ...article }
+      if (!article.urlToImage)
+        newArticle.urlToImage = 'https://res.cloudinary.com/cserviusprod/image/upload/v1539867653/samples/sheep.jpg'
+      return newArticle
+    })
+    return { country, articles }
   } catch (error) {
     if (error.response) {
       // The request was made and the server responded with a status code
