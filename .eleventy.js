@@ -9,10 +9,6 @@ module.exports = function (config) {
     config.addTransform('htmlmin', require('./src/utils/minify-html.js'))
   }
 
-  config.addPlugin(require('eleventy-plugin-lazyimages'), {
-    cacheFile: '' // don't cache results to a file
-  })
-
   // config.setBrowserSyncConfig({
   //   https: {
   //     key: '/home/chris/localhost.key',
