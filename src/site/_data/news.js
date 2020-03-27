@@ -12,6 +12,7 @@ async function getNews(country) {
       const newArticle = { ...article }
       if (!article.urlToImage)
         newArticle.urlToImage = 'https://res.cloudinary.com/cserviusprod/image/upload/v1539867653/samples/sheep.jpg'
+      else newArticle.urlToImage = newArticle.urlToImage.replace(/^http:\/\//i, 'https://')
       return newArticle
     })
     return { country, articles }
