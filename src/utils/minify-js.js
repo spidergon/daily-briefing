@@ -1,6 +1,6 @@
 const Terser = require('terser')
 
-module.exports = function(code) {
+module.exports = code => {
   const minified = Terser.minify(code)
   if (minified.error) {
     console.log('Terser error: ', minified.error)

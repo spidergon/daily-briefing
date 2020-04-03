@@ -8,29 +8,26 @@ div.container {
   margin: 0 auto;
 }
 
-/*
-  Global headings conventions
-*/
 h1 {
   @apply uppercase;
   @apply text-3xl;
 }
+
 h1,
 h2 {
   @apply font-semibold;
 }
 
-/*
-  Base styles for links
-*/
 a {
   @apply border-b-2;
   @apply border-teal-400;
 }
+
 a:hover,
 a:focus {
   @apply border-teal-200;
 }
+
 a.naked:link,
 a.naked:visited {
   @apply border-0;
