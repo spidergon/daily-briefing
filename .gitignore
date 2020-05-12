@@ -2,3 +2,4 @@ node_modules
 dist
 .env
 src/site/css/styles.css
+eslint_result.html
