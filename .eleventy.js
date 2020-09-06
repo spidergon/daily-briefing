@@ -17,6 +17,7 @@ module.exports = function (config) {
   // })
 
   config.addPassthroughCopy('./src/site/css')
+  config.addPassthroughCopy('./src/site/audio')
 
   return {
     dir: {

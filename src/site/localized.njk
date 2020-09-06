@@ -31,7 +31,7 @@ permalink: /{{ selectedNews.country }}/index.html
       {% if item.country === selectedNews.country %}
         {{ item.country }}
       {% else %}
-        <a href="/{{ item.country }}/">{{ item.country }}</a>
+        <a href="/{{ item.country }}/" @mouseenter="$refs.pop.play()">{{ item.country }}</a>
       {% endif %}
     {% endfor %}
   </h2>

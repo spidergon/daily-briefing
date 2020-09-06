@@ -7,11 +7,18 @@
     {# <meta http-equiv="Content-Security-Policy" content="block-all-mixed-content"> #}
     <link rel="stylesheet" href="/css/styles.css">
     <title>{{ title }}</title>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.6.0/dist/alpine.min.js" defer></script>
   </head>
-  <body class="bg-gray-100 text-gray-900 text-center">
+  <body class="bg-gray-100 text-gray-900 text-center" x-data>
     <header class="mb-4">
-      <a href="/">Home</a> | <a href="/about/">About</a>
+      <a href="/" @mouseenter="$refs.pop.play()">Home</a> | <a href="/about/" @mouseenter="$refs.pop2.play()">About</a>
     </header>
     {{ content | safe }}
+    <audio x-ref="pop">
+      <source src="/audio/pop.mp3" type="audio/mpeg" />
+    </audio>
+    <audio x-ref="pop2">
+      <source src="/audio/pop2.mp3" type="audio/mpeg" />
+    </audio>
   </body>
 </html>
