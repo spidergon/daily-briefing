@@ -20,12 +20,12 @@ h2 {
 
 a {
   @apply border-b-2;
-  @apply border-teal-400;
+  @apply border-blue-400;
 }
 
 a:hover,
 a:focus {
-  @apply border-teal-200;
+  @apply border-blue-200;
 }
 
 a.naked:link,
@@ -37,10 +37,6 @@ a.naked:visited {
   .max-h-img {
     max-height: 150px;
   }
-}
-
-.red {
-  color: red;
 }
 
 @tailwind utilities;

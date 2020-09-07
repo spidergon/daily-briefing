@@ -13,8 +13,8 @@ permalink: /{{ selectedNews.country }}/index.html
   <div class="vibe mt-4">
     You are great!
   </div>
-  <div class="red text-3xl">
-    ❤
+  <div class="text-hot-pink text-3xl">
+    <span class="cursor-pointer" @click="$refs.hihi.play()">❤</span>
   </div>
 
   <div id="weather" class="hidden">
@@ -37,7 +37,7 @@ permalink: /{{ selectedNews.country }}/index.html
   </h2>
 
   {% for article in selectedNews.articles %}
-    <div class="text-center md:text-left bg-white mb-8 p-4 border-b-2 md:flex">
+    <div class="text-center md:text-left bg-white mb-8 p-4 border-b-2 md:flex border-gray-300">
       <div class="md:flex-shrink-0">
         <a href="{{ article.url }}" target="_blank" rel="noreferrer noopener"><img class="max-h-img object-cover rounded-lg md:w-56" src="{{ article.urlToImage}}" alt="{{ article.title}}"></a>
       </div>
