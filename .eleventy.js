@@ -1,5 +1,7 @@
 module.exports = function (config) {
-  config.addFilter('jsmin', require('./src/utils/minify-js.js')) // compress and combine js files
+  // config.addFilter('jsmin', require('./src/utils/minify-js.js')) // compress and combine js files
+
+  config.addNunjucksAsyncFilter('jsmin', require('./src/utils/minify-js.js')) // compress and combine js files
 
   config.addShortcode('date', (value, country) => {
     return require('moment')(value).locale(country.replace('us', 'en').replace('br', 'pt')).format('LLLL')
