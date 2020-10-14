@@ -39,8 +39,8 @@
     "postcss": "8.1.1",
     "postcss-cli": "8.1.0",
     "prettier": "2.1.2",
-    "tailwindcss": "1.8.13",
-    "terser": "5.3.4"
+    "tailwindcss": "1.9.1",
+    "terser": "5.3.5"
   },
   "repository": {
     "type": "git",
